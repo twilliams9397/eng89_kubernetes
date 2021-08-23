@@ -21,3 +21,12 @@
 - after starting docker navigate to settings -> kubernetes and ensure it is enabled
 - `kubectl` will give commands available and check if install was correctly done, and default clusters can be seen in the docker app
 - `kubectl get service` will show the running services with info
+- `kubectl get` can be `name_of_resource`, `node`, `pods`
+- can use `kubectl describe pod_id` to see what is inside a pod, which are similar to containers
+- can use docker desktop to view more container details and see what is running
+
+
+
+
+
+
