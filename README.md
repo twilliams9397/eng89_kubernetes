@@ -1,4 +1,5 @@
 # Kubernetes (k8)
+![k8_cluster](k8_cluster.png)
 - orchestration platform, controls behaviour of multiple containers
 - where `docker compose` runs a few container, Kubernetes manages 100s/1000s
 - can deploy multiple copies, load balance, self healing (manages containers going down automatically) 
@@ -12,3 +13,6 @@
 - challenge: already using microsft languages/service (azure, .net frameworks) so not compatible with k8 version
 - analysts find it useful knowing the terms/processes for better understanding but havent always heard of the tech
 - people dont always have the latest tech knowledge
+- kubernetes can be expensive for smaller solutions, and needs prior understanding of containers, networking etc
+- provider managed k8 services manage the master node for you, so there is no provisioning needed for the master node on launch, and managed services can vary from different providers
+- in a self managed service there is more control over the cluster control, and can manage each layer component individually. there is also more control over deployment and administration of the clusters
