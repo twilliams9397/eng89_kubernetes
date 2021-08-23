@@ -39,6 +39,7 @@
 - `kubectl delete pod pod_id` will delete pods, k8 will redeploy pods with self healing - i.e. if there are 3 and one is deleted/goes down, k8 will load balance while recreating it
 - `kubectl edit svc nginx-deployment` will open editing for the service 
 - load balancer, cluster ip or node ports can be used for services
+- `kubectl delete deploy nginx-deployment` and `kubectl delete svc nginx-deployment` are used to get rid of a service and its pods
 
 
 

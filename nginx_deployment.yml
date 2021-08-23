@@ -6,7 +6,7 @@ apiVersion: apps/v1
 kind: Deployment
 # deployment info
 metadata:
-  name: nginx_deployment
+  name: nginx-deployment
 
 # specification of deployment
 spec:
