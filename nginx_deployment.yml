@@ -1,0 +1,15 @@
+# k8 works with API version to declare resources
+# declaring deployment version
+apiVersion: apps/v1
+# type of resource  - case sensitive
+kind: Deployment
+# deployment info
+metadata:
+  name: nginx-deployment
+
+# specification of deployment
+spec:
+  selector:
+    # matches this resource that matches nginx
+    matchLabels:
+      app: nginx

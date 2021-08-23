@@ -25,6 +25,13 @@
 - can use `kubectl describe pod_id` to see what is inside a pod, which are similar to containers
 - can use docker desktop to view more container details and see what is running
 
+## Prerequisites/task
+- ensure all required ports for app are available - 3000, 80 and 27027 for sparta node app
+- create k8 deployment file called nginx_deployment.yml
+- use default nginx image
+- create 2 replicas of this deployment
+- `kubectl create -f file_name.yml` will run the deployment file
+
 
 
 
