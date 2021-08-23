@@ -6,7 +6,7 @@ apiVersion: apps/v1
 kind: Deployment
 # deployment info
 metadata:
-  name: nginx-deployment
+  name: nginx_deployment
 
 # specification of deployment
 spec:
@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: twilliams9397/docker_production_v3
         ports:
         - containerPort: 80
