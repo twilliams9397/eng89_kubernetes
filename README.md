@@ -28,7 +28,7 @@
 ## Prerequisites/task
 - ensure all required ports for app are available - 3000, 80 and 27027 for sparta node app
 - create k8 deployment file called nginx_deployment.yml
-- use default nginx image
+- use default nginx image - can use production ready image for node app
 - create 2 replicas of this deployment
 - `kubectl create -f file_name.yml` will run the deployment file
 - `kubectl get deployment` or `deploy` will list what has been deployed and is running
