@@ -8,3 +8,7 @@
 - create a kubernetes cluster - platform to manage multiple running containers, e.g. docker containers
 - advantages: self heal (auto spin up instance to replace any that go down), load balance between instances while self healing is performed, automated rollouts/rollbacks between working versions, auto scaling and bin packing, storage orchestration
 - deployment replica sets, snapshots of same image and each pod has individual IP for connections/API
+- what problems, what challengs, what skillset, comms between tech/non tech - FA webinar
+- challenge: already using microsft languages/service (azure, .net frameworks) so not compatible with k8 version
+- analysts find it useful knowing the terms/processes for better understanding but havent always heard of the tech
+- people dont always have the latest tech knowledge
