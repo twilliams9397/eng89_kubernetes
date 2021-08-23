@@ -17,7 +17,7 @@ spec:
           image: twilliams9397/docker_production_v3
           ports:
             - containerPort: 3000
-          env:
+          env: # env variable for db
             - name: DB_HOST
               value: mongodb://mongo:27017/posts
           imagePullPolicy: Always
