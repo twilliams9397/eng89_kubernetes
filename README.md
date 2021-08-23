@@ -33,6 +33,7 @@
 - `kubectl create -f file_name.yml` will run the deployment file
 - `kubectl get deployment` or `deploy` will list what has been deployed and is running
 - `kubectl get pods` will now display each replica
+- to launch deployment to public browser we need to create `nginx_service.yml` to connect with deployment
 
 
 
