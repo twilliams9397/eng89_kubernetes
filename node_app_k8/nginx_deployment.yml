@@ -21,8 +21,10 @@ spec:
             - name: DB_HOST
               value: mongodb://mongo:27017/posts
           imagePullPolicy: Always
-          # command:
-          # args: ["node", "seeds/seed.js"]
+          # command: ["/bin/sh"]
+          # args: ["-c", "while true; do echo hello; sleep 10;done"]
+
+
 ---
 apiVersion: v1
 kind: Service
