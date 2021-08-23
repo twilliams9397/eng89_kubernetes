@@ -32,6 +32,7 @@
 - create 2 replicas of this deployment
 - `kubectl create -f file_name.yml` will run the deployment file
 - `kubectl get deployment` or `deploy` will list what has been deployed and is running
+- `kubectl get pods` will now display each replica
 
 
 
