@@ -28,6 +28,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: twilliams9397/docker_production_v3
+        image: nginx
         ports:
         - containerPort: 80
