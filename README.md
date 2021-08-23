@@ -20,7 +20,7 @@
 ## Setup
 - after starting docker navigate to settings -> kubernetes and ensure it is enabled
 - `kubectl` will give commands available and check if install was correctly done, and default clusters can be seen in the docker app
-- `kubectl get service` will show the running services with info
+- `kubectl get service` or `svc` will show the running services with info
 - `kubectl get` can be `name_of_resource`, `node`, `pods`
 - can use `kubectl describe pod_id` to see what is inside a pod, which are similar to containers
 - can use docker desktop to view more container details and see what is running
@@ -35,8 +35,10 @@
 - `kubectl get pods` will now display each replica
 - to launch deployment to public browser we need to create `nginx_service.yml` to connect with deployment
 - run this service file with same `create` command, and nginx server is now available on localhost
-- `kubectl edit deploy nginx_deployment` opens notepad to live edit (vi editor) the deployment file, which has been added to by k8
+- `kubectl edit deploy nginx-deployment` opens notepad to live edit (vi editor) the deployment file, which has been added to by k8
 - `kubectl delete pod pod_id` will delete pods, k8 will redeploy pods with self healing - i.e. if there are 3 and one is deleted/goes down, k8 will load balance while recreating it
+- `kubectl edit svc nginx-deployment` will open editing for the service 
+- load balancer, cluster ip or node ports can be used for services
 
 
 
