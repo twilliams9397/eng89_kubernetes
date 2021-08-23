@@ -34,6 +34,9 @@
 - `kubectl get deployment` or `deploy` will list what has been deployed and is running
 - `kubectl get pods` will now display each replica
 - to launch deployment to public browser we need to create `nginx_service.yml` to connect with deployment
+- run this service file with same `create` command, and nginx server is now available on localhost
+- `kubectl edit deploy nginx_deployment` opens notepad to live edit (vi editor) the deployment file, which has been added to by k8
+- `kubectl delete pod pod_id` will delete pods, k8 will redeploy pods with self healing - i.e. if there are 3 and one is deleted/goes down, k8 will load balance while recreating it
 
 
 
