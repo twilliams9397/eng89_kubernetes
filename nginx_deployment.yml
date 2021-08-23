@@ -13,3 +13,20 @@ spec:
     # matches this resource that matches nginx
     matchLabels:
       app: nginx
+
+  # create 2 replicas
+  replicas: 2
+
+  # template to use label for k8 service to launch in the browser
+  template:
+    metadata:
+      labels:
+        # must match above label
+        app: nginx
+
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
