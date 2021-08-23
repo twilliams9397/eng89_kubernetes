@@ -20,4 +20,4 @@
 ## Setup
 - after starting docker navigate to settings -> kubernetes and ensure it is enabled
 - `kubectl` will give commands available and check if install was correctly done, and default clusters can be seen in the docker app
-- `kubectl get service` will show the running services, the get command is a key commands
+- `kubectl get service` will show the running services with info
