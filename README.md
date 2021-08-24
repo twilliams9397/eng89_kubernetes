@@ -2,6 +2,13 @@
 ![k8_cluster](k8_cluster.png)
 - orchestration platform, controls behaviour of multiple containers
 - where `docker compose` runs a few container, Kubernetes manages 100s/1000s
+- `kompose` can convert docker compose yml files into k8 files:
+```shell
+curl -L https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-darwin-amd64 -o kompose
+chmod +x kompose
+sudo mv ./kompose /usr/local/bin/kompose
+```
+to install, then run `kompose convert` to convert the docker compose file
 - can deploy multiple copies, load balance, self healing (manages containers going down automatically) 
 - open sourced by google so publically available, used by ~70% of surveyed organisations in 2017
 - other cloud providers (Azure, google cloud, AWS) run kubernetes based services as well
