@@ -12,7 +12,7 @@ sudo mv ./kompose /usr/local/bin/kompose
 
 brew install kompose
 ```
-to install, then run `kompose convert` to convert the docker compose file - it will create the necessary deployment and service files for each service
+to install, then run `kompose convert` to convert the docker compose file - it will create the necessary deployment and service files for each service, e.g. the web app and db in the node_app_k8 folder in this repo
 - can deploy multiple copies, load balance, self healing (manages containers going down automatically) 
 - open sourced by google so publically available, used by ~70% of surveyed organisations in 2017
 - other cloud providers (Azure, google cloud, AWS) run kubernetes based services as well
