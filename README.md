@@ -2,7 +2,7 @@
 ![k8_cluster](k8_cluster.png)
 - orchestration platform, controls behaviour of multiple containers
 - where `docker compose` runs a few container, Kubernetes manages 100s/1000s
-- `kompose` can convert docker compose yml files into k8 files:
+- *`kompose`* can convert docker compose yml files into k8 files:
 ```shell
 curl -L https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-darwin-amd64 -o kompose
 chmod +x kompose
@@ -62,7 +62,21 @@ to install, then run `kompose convert` to convert the docker compose file - it w
 ## Jobs
 - by creating a cron-jobs.yml file, jobs can be triggered to run at certain times or once after each time period
 - `kubectl get jobs --watch` will give a log of the jobs running
-- `pods=$(kubectl get pods --selector=job-name=eng89-27163583 --output=jsonpath={.items[*].metadata.name})` will return the job outputs in a readable format
+- `pods=$(kubectl get pods --selector=job-name=eng89-27163583 --output=jsonpath={.items[*].metadata.name})` will return the job outputs in a readable format when running `kubectl logs $pods`
+```
+Cron schedule syntax
+┌────────────────── timezone (optional)
+| ┌───────────── minute (0 - 59)
+| │ ┌───────────── hour (0 - 23)
+| │ │ ┌───────────── day of the month (1 - 31)
+| │ │ │ ┌───────────── month (1 - 12)
+| │ │ │ │ ┌───────────── day of the week (0 - 6) (Sunday to Saturday;
+| │ │ │ │ │ 7 is also Sunday on some systems)
+| │ │ │ │ │
+| │ │ │ │ │
+CRON_TZ=UTC * * * * *
+```
+- can be used in instances like web scraping or any jobs that needs to be regularly refreshed
 
 
 

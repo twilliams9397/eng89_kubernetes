@@ -14,7 +14,7 @@ spec:
   # - IPv4
   # ipFamilyPolicy: SingleStack
   ports:
-  - nodePort: 30442
+  - nodePort: 30442 # can be in 30000 to 32000 range
     port: 80
     protocol: TCP
     targetPort: 80
