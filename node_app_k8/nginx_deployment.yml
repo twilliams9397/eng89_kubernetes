@@ -20,12 +20,13 @@ spec:
           env: # env variable for db
             - name: DB_HOST
               value: mongodb://mongo:27017/posts
-          imagePullPolicy: Always
           # command: ["/bin/sh"]
-          # args: ["-c", "while true; do echo hello; sleep 10;done"]
-
+          # args: ["-c", "node","seeds/seed.js"]
+          imagePullPolicy: Always
+          
 
 ---
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -43,9 +44,9 @@ spec:
   # ipFamilyPolicy: SingleStack
   ports:
   - nodePort: 30442
-    port: 80
+    port: 80 # deploy to this port
     protocol: TCP
-    targetPort: 3000
+    targetPort: 3000 # listen to this port
   selector:
     app: node-app
   sessionAffinity: None
@@ -54,3 +55,31 @@ status:
   loadBalancer:
     ingress:
     - hostname: localhost
+
+---
+
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: node-app
+  namespace: default
+spec:
+  maxReplicas: 9
+  minReplicas: 2
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: node-app
+  targetCPUUtilizationPercentage: 50
+
+
+
+
+
+
+
+
+
+
+
+

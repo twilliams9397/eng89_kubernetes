@@ -24,6 +24,11 @@
 - `kubectl get` can be `name_of_resource`, `node`, `pods`
 - can use `kubectl describe pod_id` to see what is inside a pod, which are similar to containers
 - can use docker desktop to view more container details and see what is running
+- By default the type of the service is cluster, LoadBalancer and NodePort are used for public access
+- can use `kubectl scale deploy deployment-name --replicas=5` for example, to scale up to 5 pods
+- to auto scale deployment on demand we need to declare a minimum and maximum number of pods
+- create a file/add to file with --- separator and declare variables for min/max and conditions for scaling
+- `kubectl get hpa` will show the details and conditions for the auto scaling
 
 ## Prerequisites/task
 - ensure all required ports for app are available - 3000, 80 and 27027 for sparta node app
