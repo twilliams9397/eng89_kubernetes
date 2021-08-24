@@ -16,6 +16,7 @@
 - kubernetes can be expensive for smaller solutions, and needs prior understanding of containers, networking etc
 - provider managed k8 services manage the master node for you, so there is no provisioning needed for the master node on launch, and managed services can vary from different providers
 - in a self managed service there is more control over the cluster control, and can manage each layer component individually. there is also more control over deployment and administration of the clusters
+- `kubectl help` will show a list of commands with explanations
 
 ## Setup
 - after starting docker navigate to settings -> kubernetes and ensure it is enabled
