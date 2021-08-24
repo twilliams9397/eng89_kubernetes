@@ -7,6 +7,10 @@
 curl -L https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-darwin-amd64 -o kompose
 chmod +x kompose
 sudo mv ./kompose /usr/local/bin/kompose
+
+--- or ---
+
+brew install kompose
 ```
 to install, then run `kompose convert` to convert the docker compose file - it will create the necessary deployment and service files for each service
 - can deploy multiple copies, load balance, self healing (manages containers going down automatically) 
