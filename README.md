@@ -8,7 +8,7 @@ curl -L https://github.com/kubernetes/kompose/releases/download/v1.22.0/kompose-
 chmod +x kompose
 sudo mv ./kompose /usr/local/bin/kompose
 ```
-to install, then run `kompose convert` to convert the docker compose file
+to install, then run `kompose convert` to convert the docker compose file - it will create the necessary deployment and service files for each service
 - can deploy multiple copies, load balance, self healing (manages containers going down automatically) 
 - open sourced by google so publically available, used by ~70% of surveyed organisations in 2017
 - other cloud providers (Azure, google cloud, AWS) run kubernetes based services as well
