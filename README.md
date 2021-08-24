@@ -46,6 +46,7 @@
 - `kubectl edit svc nginx-deployment` will open editing for the service 
 - load balancer, cluster ip or node ports can be used for services
 - `kubectl delete deploy nginx-deployment` and `kubectl delete svc nginx-deployment` are used to get rid of a service and its pods
+- `kubectl port-forward svc/service-name 8080:80` can be used to port forward if the containers arent auto assigned an IP
 
 
 
