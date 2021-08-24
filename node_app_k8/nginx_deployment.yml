@@ -17,11 +17,11 @@ spec:
           image: twilliams9397/docker_production_v3
           ports:
             - containerPort: 3000
-          env: # env variable for db
+          env:
             - name: DB_HOST
               value: mongodb://mongo:27017/posts
-          # command: ["/bin/sh"]
-          # args: ["-c", "node","seeds/seed.js"]
+          # command: [""] # deploy with this then delete and re deploy without
+          # args: ["node","seeds/seed.js"] # error with seeds within the image before was pushed to docker
           imagePullPolicy: Always
           
 
