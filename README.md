@@ -59,7 +59,10 @@ to install, then run `kompose convert` to convert the docker compose file - it w
 - `kubectl delete deploy nginx-deployment` and `kubectl delete svc nginx-deployment` are used to get rid of a service and its pods
 - `kubectl port-forward svc/service-name 8080:80` can be used to port forward if the containers arent auto assigned an IP
 
-
+## Jobs
+- by creating a cron-jobs.yml file, jobs can be triggered to run at certain times or once after each time period
+- `kubectl get jobs --watch` will give a log of the jobs running
+- `pods=$(kubectl get pods --selector=job-name=eng89-27163583 --output=jsonpath={.items[*].metadata.name})` will return the job outputs in a readable format
 
 
 
