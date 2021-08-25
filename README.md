@@ -30,6 +30,7 @@ to install, then run `kompose convert` to convert the docker compose file - it w
 - `kubectl help` will show a list of commands with explanations
 
 ## Setup
+!(pod diagram)[diagram.png]
 - after starting docker navigate to settings -> kubernetes and ensure it is enabled
 - `kubectl` will give commands available and check if install was correctly done, and default clusters can be seen in the docker app
 - `kubectl get service` or `svc` will show the running services with info
