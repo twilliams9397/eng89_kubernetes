@@ -58,6 +58,7 @@ to install, then run `kompose convert` to convert the docker compose file - it w
 - load balancer, cluster ip or node ports can be used for services
 - `kubectl delete deploy nginx-deployment` and `kubectl delete svc nginx-deployment` are used to get rid of a service and its pods
 - `kubectl port-forward svc/service-name 8080:80` can be used to port forward if the containers arent auto assigned an IP
+- `kubectl exec pod-name env node seeds/seed.js` will run the seeds command inside the pod environment if needed
 
 ## Jobs
 - by creating a cron-jobs.yml file, jobs can be triggered to run at certain times or once after each time period
